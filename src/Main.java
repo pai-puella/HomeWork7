@@ -38,5 +38,58 @@ public class Main {
             System.out.println("Год " + year + ", численность населения составляет " + population);
         }
         System.out.println();
+
+        System.out.println("Задача 4");
+        double initialAmount = 15000;
+        double targetAmountForVasiliy = 12000000;
+        double interestRate = 0.07; // Процент банка
+
+        int monthsCount = 0; // Счетчик месяцев
+        double savings = initialAmount; // Текущая сумма накоплений
+
+        // Пока текущая сумма накоплений меньше целевой суммы, продолжаем копить
+        while (savings < targetAmountForVasiliy) {
+            monthsCount++; // Увеличиваем счетчик месяцев
+
+            double interestPercents = savings * interestRate; // Вычисляем проценты
+            savings += interestPercents;
+
+            System.out.println("Месяц " + monthsCount + ", сумма накоплений составляет " + savings);
+
+        }
+
+        System.out.println("Василию потребуется " + monthsCount + " месяцев, чтобы накопить 12000000 рублей");
+        System.out.println();
+
+        System.out.println("Задача 5");
+        monthsCount = 0;
+        savings = initialAmount;
+        while (savings < targetAmountForVasiliy) {
+            monthsCount++; // Увеличиваем счетчик месяцев
+
+            interest = savings * interestRate; // Вычисляем проценты
+            savings += interest;
+
+            if (monthsCount % 6 == 0) { // Выводим результат только для каждого шестого месяца
+                System.out.println("Месяц " + monthsCount + ", сумма накоплений составляет " + savings);
+            }
+        }
+        System.out.println();
+
+        System.out.println("Задача 6");
+        monthsCount = 0;
+        savings = initialAmount;
+
+        // Пока не прошло 9 лет (108 месяцев), продолжаем копить
+        while (monthsCount < 108) {
+            monthsCount++;
+
+            interest = savings * interestRate;
+            savings += interest;
+
+            if (monthsCount % 6 == 0) { // Выводим результат только для каждого шестого месяца
+                System.out.println("Месяц " + monthsCount + ", сумма накоплений составляет " + savings);
+            }
+        }
     }
 }
