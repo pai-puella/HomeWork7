@@ -106,7 +106,7 @@ public class Main {
         int startYear = currentYear - 200;
         int endYear = currentYear + 100;
 
-        for (int year = 0; year <= endYear; year+=79) {
+        for (int year = 0; year <= endYear; year += 79) {
             if (year >= startYear && year <= currentYear) {
                 System.out.println(year);
             } else if (year > currentYear) {
