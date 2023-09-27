@@ -27,6 +27,16 @@ public class Main {
         }
         System.out.println();
 
+        System.out.println("Задача 3");
+        int population = 12000000;
+        for (int year = 1; year <= 10; year++) {
+            int births = (int) (population * 0.017);
+            int deaths = (int) (population * 0.008);
 
+            population += (births - deaths);
+
+            System.out.println("Год " + year + ", численность населения составляет " + population);
+        }
+        System.out.println();
     }
 }
