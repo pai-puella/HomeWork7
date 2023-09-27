@@ -91,5 +91,15 @@ public class Main {
                 System.out.println("Месяц " + monthsCount + ", сумма накоплений составляет " + savings);
             }
         }
+        System.out.println();
+
+        System.out.println("Задача 7");
+        int firstFriday = 6;
+
+        for (int day = firstFriday; day <= 31; day += 7) {
+            System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+        }
+        System.out.println();
+
     }
 }
